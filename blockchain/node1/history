@@ -1,0 +1,13 @@
+net.peerCount
+admin.addPeer("enode://4b335c3f2fe31b5e5d36e8fb33dedfcd844b0adeb7b865649febf095f0af58b0995c026645f3d847c5ffcc4e16661e57b1b174aa47149b617edd51f3dc0da297@127.0.0.1:30302?discport=0")
+net.peerCount
+admin.addPeer("enode://4b335c3f2fe31b5e5d36e8fb33dedfcd844b0adeb7b865649febf095f0af58b0995c026645f3d847c5ffcc4e16661e57b1b174aa47149b617edd51f3dc0da297@127.0.0.1:30305")
+net.peerCount
+geth account new
+account new
+account.new()
+eth.accounts.create()
+web3.eth.accounts.create();
+web3.eth.accounts.create()
+eth.accounts
+exit]
