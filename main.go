@@ -4,6 +4,12 @@ import (
 	"fmt"
 	"log"
 	"github.com/ethereum/go-ethereum/accounts/keystore"
+
+	//"github.com/ethereum/go-ethereum/accounts/abi/bind"
+	//"github.com/ethereum/go-ethereum/common"
+	//"github.com/ethereum/go-ethereum/core/types"
+	//"github.com/ethereum/go-ethereum/crypto"
+	"github.com/ethereum/go-ethereum/ethclient"
 )
 
 func menu(mapClients map[int][]string) (string, string) {
@@ -98,7 +104,8 @@ func menu2() {
 	for {
 		fmt.Println("1. Criar eventos")
 		fmt.Println("2. Ver eventos")
-		fmt.Println("3. Sair")
+		fmt.Println("3. Depositar")
+		fmt.Println("4. Sair")
 		fmt.Scanln(&option)
 	
 		switch option {
@@ -107,6 +114,8 @@ func menu2() {
 		case 2:
 			seeEvents()
 		case 3:
+			deposit()
+		case 4:
 			fmt.Println("Saindo...")
 			return
 		default:
@@ -123,7 +132,17 @@ func seeEvents() {
 	//
 }
 
+func deposit(to string) {
+	//
+}
+
 func main() {
+
+	client, err := ethclient.Dial("http://localhost:8545") // Porta padrão do Geth
+	if err != nil {
+		log.Fatalf("Erro ao conectar com o nó: %v", err)
+	}
+	defer client.Close()
 
 	mapClients := make(map[int][]string)
 
